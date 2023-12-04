@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block contenidocambiante %}
+   
+    <h1>Lista de Stock</h1>
+    <ul>
+
+
+
+ {% for stock in lista_stock  %}
+ 
+ <li><strong>Producto = </strong>   {{stock.producto}} ------ <strong>Cantidad =</strong> {{stock.cantidad}} ----- <strong>Precio = </strong> $ {{stock.precio}}
+</li>
+ 
+ {% endfor %}
+    </ul>
+{% endblock contenidocambiante %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block contenidocambiante %}
+    <form action="{% url 'cliente' %}" method="post"> {% csrf_token %}
+        
+        {{miformularioc.as_p}}
+        
+        <button type="submit">Agregar</button>
+    </form>
+{% endblock contenidocambiante %}
+    
