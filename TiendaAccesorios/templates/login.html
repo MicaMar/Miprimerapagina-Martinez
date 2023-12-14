@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h2> Ingresar a la plataforma </h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+        {{ formulario.as_p }}
+    <button type="submit"> Iniciar sesion </button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenido %}
+<h1> Producto detalle </h1>
+
+<p>Nombre: <i>{{producto.nombre}}</i></p>
+<p>Descripcion: <i>{{producto.descripcion}}</i></p>
+<p>Precio: <i>{{producto.precio}}</i></p>
+<p>Cantidad: <i>{{producyto.cantidad_en_stock}}</i></p>
+
+<p>
+    <a href="{% url 'productos lista' %}"> Volver a productos </a>
+</p>
+
+{% endblock %}

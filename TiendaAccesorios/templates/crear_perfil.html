@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h2>Crear perfil de usuario</h2>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Crear Perfil</button>
+</form>
+
+{% endblock %}

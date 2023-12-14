@@ -8,7 +8,10 @@ class Producto(models.Model):
     precio = models.IntegerField ()
     cantidad_en_stock = models.IntegerField()
     
+    def __str__(self):
+        return self.nombre + ". Precio: " + str(self.precio) +  ". Cantidad en stock: " + str(self.cantidad_en_stock)
     
+     
 class Cliente (models.Model):
     nombre = models.CharField(max_length=50)
     producto = models.CharField(max_length=50)
@@ -17,7 +20,7 @@ class Cliente (models.Model):
     
        
     def __str__(self):
-        return self.nombre + ", DNI: " + str(self.DNI)
+        return self.nombre + ". DNI: " + str(self.DNI)
 
 
 class Empleado (models.Model):
@@ -27,4 +30,4 @@ class Empleado (models.Model):
 
    
     def __str__(self):
-        return self.nombre + ", DNI: " + str(self.DNI)
+        return self.nombre + ". DNI: " + str(self.DNI)
